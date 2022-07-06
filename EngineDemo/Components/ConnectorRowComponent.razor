@@ -1,0 +1,15 @@
+﻿@using Blazor.Diagrams.Components.Renderers
+
+<li>
+        @if (Row.Input != null)
+        {
+            <span style="padding-left: 25px; font-size: small; color: darkgray;">@Row.Input.Description</span>
+            <PortRenderer Port="@Row.Input.Port" Class="@GetClass(Row.Input.Port)"></PortRenderer>
+        }
+
+        @if (Row.Output != null)
+        {
+            <span style="padding-left: @(Row.Input == null ? "125px" : "50px"); font-size:small; color: darkgray;">@Row.Output.Description</span>
+            <PortRenderer Port="@Row.Output.Port" Class="@GetClass(Row.Output.Port)"></PortRenderer>
+        }
+</li>

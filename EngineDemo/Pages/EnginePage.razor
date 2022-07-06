@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<div style="z-index: 10; border-bottom: 1px solid lightgray;">
+    <button class="btn btn-primary m-2" @onclick="AddBooleanInputNode">Add BooleanInput node</button>
+    <button class="btn btn-primary m-2" @onclick="AddNumberInputNode">Add NumberInput node</button>
+    <button class="btn btn-primary m-2" @onclick="AddStringInputNode">Add StringInput node</button>
+    <button class="btn btn-primary m-2" @onclick="AddAdderNode">Add Adder node</button>
+    <button class="btn btn-primary m-2" @onclick="AddToStringNode">Add ToString node</button>
+    <button class="btn btn-primary m-2" @onclick="AddResultNode">Add Result node</button>
+    <button class="btn btn-primary m-2" @onclick="RunEngine">Run Engine</button>
+</div>
+
+<div style="width: 100%; height: calc(100% - 100px);">
+    <CascadingValue Value="@_diagram">
+        <DiagramCanvas></DiagramCanvas>
+    </CascadingValue>
+</div>
